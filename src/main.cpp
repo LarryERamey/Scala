@@ -114,15 +114,15 @@ int main(int argc, char* argv[])
   }
 
   
-  for(auto h: fullHikerSet)
-  {
-    cout<<h;
-  }
+  // for(auto h: fullHikerSet)
+  // {
+  //   cout<<h;
+  // }
 
-  for( auto b: bridgeVec)
-  {
-    cout<<b<<"\n";
-  }
+  // for( auto b: bridgeVec)
+  // {
+  //   cout<<b<<"\n";
+  // }
 
   float totalTime=0.0f;
   SpeedSet currentHikerSet(cmpSpeed);
@@ -136,25 +136,25 @@ int main(int argc, char* argv[])
     }
     currentHikerSet.insert(setItr,setItr2);
     fullHikerSet.erase(setItr,setItr2);
-    cout<<"current"<<endl;
-    for(auto h: currentHikerSet)
-    {
-      cout<<h;
-    }
+    // cout<<"current"<<endl;
+    // for(auto h: currentHikerSet)
+    // {
+    //   cout<<h;
+    // }
     totalTime+=calcTime(currentHikerSet, bridgeVec[i] );
-    cout<<"time="<<totalTime<<endl;
+    // cout<<"time="<<totalTime<<endl;
     
-    cout<<"full"<<endl;
-    for(auto h: fullHikerSet)
-    {
-      cout<<h;
-    }
+    // cout<<"full"<<endl;
+    // for(auto h: fullHikerSet)
+    // {
+    //   cout<<h;
+    // }
 
     
     
     
   }
-  
+  cout<<"total crossing time (in whatever the denominator of the speed input was) of bridges:"<<totalTime<<endl;
 
   
   return 0;
